@@ -37,13 +37,39 @@
       </ion-col>
     </ion-row>
 <br>
-
-    <ion-row>
-      <ion-col>
-        
-      </ion-col>
-    </ion-row>
-
+<ion-row>
+  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+  <ion-list>
+    <ion-item>
+      <ion-label>Select College</ion-label>
+      <ion-select value="Alliance University">
+        <ion-select-option value="Alliance University">Alliance University</ion-select-option>
+        <ion-select-option value="Pes University">Pes University</ion-select-option>
+        <ion-select-option value="Christ University">Christ University</ion-select-option>
+        <ion-select-option value="jain University">jain University</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-col>  
+</ion-row>
+<br>
+<ion-row>
+  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+    <ion-input type="text" placeholder="Course"></ion-input>
+  </ion-col>
+</ion-row>
+<br>
+<ion-row>
+  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+    <ion-input type="text" placeholder="Branch"></ion-input>
+  </ion-col>
+</ion-row>
+<br>
+<ion-row>
+  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+    <ion-input type="text" placeholder="registration Number"></ion-input>
+  </ion-col>
+</ion-row>
     <ion-row>
       <ion-col size="6" offset="3" class="ion-margin">
         <ion-button (click)="Validate()">Get OTP</ion-button>
