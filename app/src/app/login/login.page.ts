@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginPage implements OnInit {
   mobile_no:string
+  enter_otp=false;
   constructor(public httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -26,7 +27,12 @@ export class LoginPage implements OnInit {
 
       this.httpClient.post("http://localhost:8080/login", postData, {})
         .subscribe(data => {
-          console.log(data)
+          if(data.code=="OTP_SENT"){
+            this.enter_otp=true;
+          }
+          else{
+            alert(JSON.stringify(data));
+          }
          }, error => {
           console.log(error)
         });
