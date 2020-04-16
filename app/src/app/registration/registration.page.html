@@ -3,76 +3,76 @@
     <ion-title>registration</ion-title>
   </ion-toolbar>
 </ion-header>
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
-        <ion-input text-left type="text" placeholder="Name"></ion-input>  
+        <ion-input text-left type="text" placeholder="Name" [(ngModel)]="username"></ion-input>
       </ion-col>
     </ion-row>
-  <br>
+    <br />
     <ion-row>
       <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
         <ion-item>
           <ion-label>Mobile Number</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="mobileNumber"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
-    <br>
+    <br />
 
     <ion-row>
       <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
-            <ion-input type="text" placeholder="City"></ion-input>
+        <ion-input type="text" placeholder="City" [(ngModel)]="city"></ion-input>
       </ion-col>
     </ion-row>
-<br>
-    
+    <br />
+
     <ion-row>
       <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
-        <ion-input type="text" placeholder="State"></ion-input>
+        <ion-input type="text" placeholder="State" [(ngModel)]="State"></ion-input>
       </ion-col>
     </ion-row>
-<br>
-<ion-row>
-  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
-  <ion-list>
-    <ion-item>
-      <ion-label>Select College</ion-label>
-      <ion-select value="Alliance University">
-        <ion-select-option value="Alliance University">Alliance University</ion-select-option>
-        <ion-select-option value="Pes University">Pes University</ion-select-option>
-        <ion-select-option value="Christ University">Christ University</ion-select-option>
-        <ion-select-option value="jain University">jain University</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-</ion-col>  
-</ion-row>
-<br>
-<ion-row>
-  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
-    <ion-input type="text" placeholder="Course"></ion-input>
-  </ion-col>
-</ion-row>
-<br>
-<ion-row>
-  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
-    <ion-input type="text" placeholder="Branch"></ion-input>
-  </ion-col>
-</ion-row>
-<br>
-<ion-row>
-  <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
-    <ion-input type="text" placeholder="registration Number"></ion-input>
-  </ion-col>
-</ion-row>
+    <br />
+    <ion-row>
+      <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+        <ion-list>
+          <ion-item>
+            <ion-label>Select College</ion-label>
+            <ion-select  [(ngModel)]="University">
+              <ion-select-option value="Alliance University">Alliance University</ion-select-option>
+              <ion-select-option value="Pes University">Pes University</ion-select-option>
+              <ion-select-option value="Christ University">Christ University</ion-select-option>
+              <ion-select-option value="jain University">jain University</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <br />
+    <ion-row>
+      <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+        <ion-input type="text" placeholder="Course" [(ngModel)]="Course"></ion-input>
+      </ion-col>
+    </ion-row>
+    <br />
+    <ion-row>
+      <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+        <ion-input type="text" placeholder="Branch" [(ngModel)]="Branch"></ion-input>
+      </ion-col>
+    </ion-row>
+    <br />
+    <ion-row>
+      <ion-col size="6" size-xs="8" offset-xs="2" class="ion-margin">
+        <ion-input type="text" placeholder="registration Number" [(ngModel)]="registrationNumber"></ion-input>
+      </ion-col>
+    </ion-row>
     <ion-row>
       <ion-col size="6" offset="3" class="ion-margin">
-        <ion-button (click)="Validate()">Get OTP</ion-button>
+        <ion-button (click)="submit()">submit</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

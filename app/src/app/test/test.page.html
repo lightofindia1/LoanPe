@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>test</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" offset-xs="2">
+        <ion-input type="text" [(ngModel)]="myInput" placeholder="something"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" offset-xs="4">
+        <ion-button (click)="Send()">Send</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
