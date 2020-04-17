@@ -1,20 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-img src="../../assets/Logo.png"></ion-img>
 
 <ion-content>
   <ion-grid>
-    <ion-row>
+    <ion-row *ngIf="!enter_otp">
       <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
-        <ion-input [(ngModel)]="mobile_no" placeholder="Enter Mobile No"></ion-input>
+        <ion-input [(ngModel)]="mobile_no" type="number" placeholder="Enter Mobile No"></ion-input>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row *ngIf="enter_otp">
+      <ion-col size="6" size-xs="8" offset="3" offset-xs="2" class="ion-margin">
+        <ion-input [(ngModel)]="otp" type="number" placeholder="Enter OTP"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!enter_otp">
       <ion-col size="6" offset="3" class="ion-margin">
         <ion-button expand="block" (click)="Validate()">Get OTP</ion-button>
       </ion-col>
     </ion-row>
+    <ion-row *ngIf="enter_otp">
+      <ion-col size="6" offset="3" class="ion-margin">
+        <ion-button expand="block" (click)="VerifyOTP()">Verify OTP</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="enter_otp">
+      <ion-col size="6" offset="3" class="ion-margin">
+        <div class="alert alert-success">OTP has been sent successfully to your mobile</div>
+      </ion-col>
+    </ion-row>
+
   </ion-grid>
 </ion-content>
